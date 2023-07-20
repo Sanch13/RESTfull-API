@@ -1,24 +1,14 @@
-# базовый образ
-FROM python:3.11
+FROM python:3.11.4-alpine
 
-LABEL authors="sanch"
-
-# not to create files.pyc
+ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE=1
-# to see an output in real time
-ENV PYTHONUNBUFFERED=1
 
-# download dependence
-COPY /requirements.txt /temp/requirements.txt
-# copy our app
-COPY api /api
-# sign workdir
-WORKDIR /api
-# install all dependence
-RUN pip install -r /temp/requirements.txt
+WORKDIR /app/
 
-RUN adduser --disabled-password sanch
+COPY ./app /app/
 
-USER sanch
+COPY requirements.txt requirements.txt
 
-EXPOSE 8000
+# RUN apk add postgresql-client build-base postgresql-dev
+
+RUN pip install -r requirements.txt

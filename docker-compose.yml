@@ -1,27 +1,39 @@
-version: '3.7'
+version: "3.8"
 
 services:
-  web:
-    build: .
-    volumes:
-      - ./api:/api
-    ports:
-      - "8000:8000"
-    command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
-
-#    depends_on:
-#      - db
-#    env_file:
-#      - .env.dev
-#  db:
-#    image: postgres
-#    container_name: db_games
-#    volumes:
-#      - db_games_vol:/var/lib/postgresql/data
-#    env_file:
-#      - .env.dev
-#    ports:
-#      - "5433:5433"
-#volumes:
-#  db_games_vol:
+    app:
+        build: .
+        container_name: app
+        volumes:
+            - ./app:/app
+        environment:
+            - DB_HOST=db
+            - DB_NAME=app
+            - DB_USER=sanch
+            - DB_PASS=pass
+        ports:
+            - "8000:8000"
+        command: >
+            sh -c "python manage.py runserver 0.0.0.0:8000"
+        depends_on:
+            - db
+    db:
+        image: postgres:14.6-alpine
+        container_name: db
+        volumes:
+            - postgres_data:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=sanch
+            - POSTGRES_PASSWORD=pass
+            - POSTGRES_DB=app
+    pgadmin:
+        image: dpage/pgadmin4:7.4
+        container_name: pgadmin
+        ports:
+            - "5050:80"
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+            - PGADMIN_DEFAULT_PASSWORD=1302
+        restart: always
+volumes:
+    postgres_data:

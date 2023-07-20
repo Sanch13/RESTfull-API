@@ -1,5 +1,4 @@
 Django==4.2
 djangorestframework==3.14.0
-pydantic==1.10.11
-python-dotenv==0.21.1
-psycopg2-binary==2.9
+psycopg==3.1.9
+psycopg-binary==3.1.9
