@@ -4,7 +4,7 @@ from pydantic import BaseSettings
 class Settings(BaseSettings):
     SECRET_KEY: str
     DEBUG: bool
-    ALLOWED_HOSTS: str
+    ALLOWED_HOSTS: list
     ENGINE: str
     NAME_DB: str
     USER: str
@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     # CELERY_RESULT_BACKEND: str
 
     class Config:
-        env_file = ".env"
+        env_file = ".env.dev"
         env_file_encoding = "utf-8"
 
 

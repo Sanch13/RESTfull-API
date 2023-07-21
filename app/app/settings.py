@@ -9,8 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
-from secret_settings import settings
+from .secret_settings import settings
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +24,7 @@ SECRET_KEY = settings.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = settings.DEBUG
 
-ALLOWED_HOSTS = ["localhost", "0.0.0.0"]
+ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 
 # Application definition
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "rest_framework"
+    "rest_framework",
     "main.apps.MainConfig",
 ]
 
@@ -85,12 +84,12 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "app",
-        "USER": "sanch",
-        "PASSWORD": "pass",
-        "HOST": "db",
-        "PORT": "5432",
+        "ENGINE": settings.ENGINE,
+        "NAME": settings.NAME_DB,
+        "USER": settings.USER,
+        "PASSWORD": settings.PASSWORD,
+        "HOST": settings.HOST,
+        "PORT": settings.PORT,
     }
 }
 

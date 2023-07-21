@@ -3,9 +3,9 @@ FROM python:3.11.4-alpine
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE=1
 
-WORKDIR /app/
+WORKDIR /app
 
-COPY ./app /app/
+COPY /app /app
 
 COPY requirements.txt requirements.txt
 
