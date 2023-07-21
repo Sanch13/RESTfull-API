@@ -11,6 +11,8 @@ services:
             - DB_NAME=app
             - DB_USER=sanch
             - DB_PASS=pass
+        env_file:
+            - .env.dev
         ports:
             - "8000:8000"
         command: >
@@ -26,6 +28,8 @@ services:
             - POSTGRES_USER=sanch
             - POSTGRES_PASSWORD=pass
             - POSTGRES_DB=app
+        env_file:
+            - .env.dev
     pgadmin:
         image: dpage/pgadmin4:7.4
         container_name: pgadmin
