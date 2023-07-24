@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     # CELERY_RESULT_BACKEND: str
 
     class Config:
-        env_file = ".env.dev"
+        env_file = "../.env.dev"
         env_file_encoding = "utf-8"
 
 

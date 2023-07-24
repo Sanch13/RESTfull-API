@@ -1,0 +1,123 @@
+[
+  {
+    "model": "movies.movie",
+    "pk": 1,
+    "fields": {
+      "title": "Alien",
+      "genre": "Horror",
+      "year": "1979",
+      "created_date": "2023-07-22T08:00:07.592Z",
+      "update_date": "2023-07-22T08:05:38.086Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 2,
+    "fields": {
+      "title": "Interstellar",
+      "genre": "Adventure",
+      "year": "2014",
+      "created_date": "2023-07-22T08:02:30.724Z",
+      "update_date": "2023-07-22T08:02:30.724Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 3,
+    "fields": {
+      "title": "Life is Beautiful",
+      "genre": "Drama",
+      "year": "1997",
+      "created_date": "2023-07-22T08:03:15.600Z",
+      "update_date": "2023-07-22T08:03:15.600Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 4,
+    "fields": {
+      "title": "The Green Mile",
+      "genre": "Drama",
+      "year": "1999",
+      "created_date": "2023-07-22T08:03:49.199Z",
+      "update_date": "2023-07-22T08:03:49.199Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 5,
+    "fields": {
+      "title": "Terminator 2: Judgment Day",
+      "genre": "Action",
+      "year": "1991",
+      "created_date": "2023-07-22T08:04:17.421Z",
+      "update_date": "2023-07-22T08:04:17.421Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 6,
+    "fields": {
+      "title": "Psycho",
+      "genre": "Horror",
+      "year": "1960",
+      "created_date": "2023-07-22T08:05:23.168Z",
+      "update_date": "2023-07-22T08:05:23.168Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 7,
+    "fields": {
+      "title": "Gladiator",
+      "genre": "Action",
+      "year": "2000",
+      "created_date": "2023-07-22T08:06:58.713Z",
+      "update_date": "2023-07-22T08:06:58.713Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 8,
+    "fields": {
+      "title": "The Prestige",
+      "genre": "Drama",
+      "year": "2006",
+      "created_date": "2023-07-22T08:07:34.190Z",
+      "update_date": "2023-07-22T08:07:34.190Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 9,
+    "fields": {
+      "title": "Django Unchained",
+      "genre": "Drama",
+      "year": "2012",
+      "created_date": "2023-07-22T08:08:20.506Z",
+      "update_date": "2023-07-22T08:08:20.506Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 10,
+    "fields": {
+      "title": "Joker",
+      "genre": "Drama",
+      "year": "2019",
+      "created_date": "2023-07-22T08:09:04.334Z",
+      "update_date": "2023-07-22T08:09:04.334Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 11,
+    "fields": {
+      "title": "Good Will Hunting",
+      "genre": "Drama",
+      "year": "1997",
+      "created_date": "2023-07-22T08:09:37.390Z",
+      "update_date": "2023-07-22T08:09:37.390Z"
+    }
+  }
+]

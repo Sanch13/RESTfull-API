@@ -9,12 +9,12 @@ idea
 !**/migrations
 !**/migrations/__init__.py
 static/
-
+restfull-api
 dist
 db.sqlite3
 
 poetry.lock
-
+.pytest_cache
 venv
 
 .env.dev
