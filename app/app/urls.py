@@ -21,5 +21,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ping/', views.ping, name="ping"),
-    path('', include("main.urls", namespace="main")),
+    path('main/', include("main.urls", namespace="main")),
+    path('', include("movies.urls")),
 ]

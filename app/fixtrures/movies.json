@@ -119,5 +119,27 @@
       "created_date": "2023-07-22T08:09:37.390Z",
       "update_date": "2023-07-22T08:09:37.390Z"
     }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 12,
+    "fields": {
+      "title": "Fargo",
+      "genre": "comedy",
+      "year": "1996",
+      "created_date": "2023-07-24T09:10:10.390Z",
+      "update_date": "2023-07-24T09:10:10.390Z"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 13,
+    "fields": {
+      "title": "The dark Knight",
+      "genre": "Action",
+      "year": "2008",
+      "created_date": "2023-07-24T09:13:11.010Z",
+      "update_date": "2023-07-24T09:13:11.010Z"
+    }
   }
 ]
